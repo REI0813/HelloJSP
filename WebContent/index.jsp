@@ -41,7 +41,7 @@
 	<p>宣言による変数 countA=<%=countA %></p>
 	<p>スクリプトレットによる変数 countB=<%=countB %></p>
 	
-<! JSPで乱数を表示 >
+<! JSPで乱数を表示する >
 	
 	<p><% out.println(Math.random()); %></p>
 	<p><%=Math.random() %></p>
