@@ -7,7 +7,13 @@
 </head>
 <body>
     <p>こんにちは！</p>
+	
+<! JSPで現在日時を表示 >
+	
     <% out.println(new java.util.Date()); %>
+	
+<! JSPで加算メソッドを定義して呼び出す >
+	
 	<%!
 
 	static int add(int a, int b){
@@ -20,7 +26,10 @@
 
 	<p>1+2=<%=add(3, 4) %></p>
 	
+<! 宣言タグとスクリプトレットの動作確認 >
+	
 	<%! static int countA=0; %>
+	
 	<%
 	
 	int countB=0;
@@ -32,8 +41,12 @@
 	<p>宣言による変数 countA=<%=countA %></p>
 	<p>スクリプトレットによる変数 countB=<%=countB %></p>
 	
+<! JSPで乱数を表示 >
+	
 	<p><% out.println(Math.random()); %></p>
 	<p><%=Math.random() %></p>
+	
+<! POST送信フォームの作成 >
 	
 	<p>お名前を入力してください。</p>
 	
