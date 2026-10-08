@@ -19,18 +19,31 @@
 	<p><%=exception %></p>
 	
 	<table border=1>
-	<tr>
 		
+	<tr>		
 	<td><strong>エラーメッセージ</strong></td>
 	
 	<td><%= exception.getMessage() %></td>
 	</tr>
+	
 	<tr>
-		
 	<td><strong>例外を文字列に変換</strong></td>
 	
 	<td><%= exception.toString() %></td>
 	</tr>
+	
+	<tr>
+	<td><strong>スタックトレース</strong></td>
+	
+	<td>
+	<%
+	
+	exception.printStackTrace(new java.io.PrintWriter(out));
+	
+	%>
+	</td></tr>
+	
+	</table>
 </body>
 
 </html>
